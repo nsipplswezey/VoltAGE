@@ -4,6 +4,10 @@ VOLunTary Acts of Gifting Endlessly
 # Development Notes
 This is a react native product for quickly capturing images of items that are intended to be gifted, then making note of whether they were gifted!
 
+We pass images of the physical item to a convoluted nerual net, optimized for mobile, to create an identification model.
+
+When the physical item is gifted, the reciever points their phone at the item to identify the item and document receipt.
+
 ## Technical
 
 Front-end:
