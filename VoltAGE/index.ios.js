@@ -8,23 +8,50 @@ import React, {
   Component,
   StyleSheet,
   Text,
-  View
+  View,
+  Alert,
 } from 'react-native';
 
 import Swiper from 'react-native-swiper';
+import Camera from 'react-native-camera';
+const ContactPickerIOS = require('./ContactPickerIOS.js');
+const DeepMindIOS = require('./DeepMindIOS.js');
+
+
+var deepMind = function(callback){
+  DeepMindIOS.openLearner({arg1: "hello"},
+			   (message) => callback(message));
+//  ContactPickerIOS.openPicker({arg1: "hello"},
+//			      (name,number) => callback(name,number));
+}
 
 class VoltAGE extends Component {
+  
+  _changeView(){
+    this.refs.swiper.scrollTo(1);
+  }
+
+  componentDidMount(){
+  }
+
   render() {
     return (
       <Swiper 
         style={styles.wraper}
         showsPagination={false}
-	loop={false}>
+	loop={false}
+	autoplay={false}
+	autoplayTimeout={1}
+	ref={'swiper'}>
         <View style={styles.slide1}>
-	  <Text style={styles.text}>Hello Swiper</Text>
+	  <Camera style={styles.preview} >
+	    <Text style={styles.capture}>[CAPTURE]</Text>
+	  </Camera>
 	</View>
 	<View style={styles.slide2}>
-	  <Text style={styles.text}>Beautiful</Text>
+	  <Text 
+	    style={styles.text}
+	    onPress={()=>{deepMind((message)=>{console.log(message)})}}>Hello Swiper</Text>
 	</View>
 	<View style={styles.slide3}>
 	  <Text style={styles.text}>And simple</Text>
@@ -59,7 +86,20 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 30,
     fontWeight: 'bold',
-  }
+  },
+  preview: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+  },
+  capture: {
+    flex: 0,
+    backgroundColor: '#fff',
+    borderRadius: 5,
+    color: '#000',
+    padding: 10,
+    margin: 20,
+  },
 });
 
 AppRegistry.registerComponent('VoltAGE', () => VoltAGE);

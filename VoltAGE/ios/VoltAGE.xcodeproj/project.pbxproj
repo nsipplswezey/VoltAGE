@@ -19,8 +19,21 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
-		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		13B07FC11A68108700A75B9A /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.mm */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
+		3AB466BA1C993F3900509F41 /* RCTContactPickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB466B91C993F3900509F41 /* RCTContactPickerManager.m */; };
+		3AB466BD1C9944C300509F41 /* RCTDeepMindManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB466BC1C9944C300509F41 /* RCTDeepMindManager.m */; };
+		3AB466C01C99593800509F41 /* SquareCamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB466BF1C99593800509F41 /* SquareCamViewController.m */; };
+		3AB466C41C995B2F00509F41 /* DeepBelief.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB466C31C995B2F00509F41 /* DeepBelief.framework */; };
+		3AB466C61C995B8200509F41 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB466C51C995B8200509F41 /* Accelerate.framework */; };
+		3AB466C81C995B8E00509F41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB466C71C995B8E00509F41 /* Foundation.framework */; };
+		3AB466CA1C995B9500509F41 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB466C91C995B9500509F41 /* CoreGraphics.framework */; };
+		3AB466CC1C995BA600509F41 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AB466CB1C995BA600509F41 /* UIKit.framework */; };
+		3AB466D01C997CE100509F41 /* jetpac.ntwk in Resources */ = {isa = PBXBuildFile; fileRef = 3AB466CE1C997CE100509F41 /* jetpac.ntwk */; };
+		3AB466D51C99DC2200509F41 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB466D11C99DC2200509F41 /* MainStoryboard_iPad.storyboard */; };
+		3AB466D61C99DC2200509F41 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB466D31C99DC2200509F41 /* MainStoryboard_iPhone.storyboard */; };
+		3AB466D81C9B632200509F41 /* squarePNG.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB466D71C9B632200509F41 /* squarePNG.png */; };
+		3AB466DA1C9DE21900509F41 /* RCTDeepMindViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AB466D91C9DE21900509F41 /* RCTDeepMindViewManager.m */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +101,13 @@
 			remoteGlobalIDString = 83CBBA2E1A601D0E00E9B192;
 			remoteInfo = React;
 		};
+		3AB466E51C9E242A00509F41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AB466E11C9E242A00509F41 /* RCTCamera.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4107012F1ACB723B00C6AA39;
+			remoteInfo = RCTCamera;
+		};
 		78C398B81ACF4ADC00677621 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */;
@@ -122,8 +142,27 @@
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = VoltAGE/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = VoltAGE/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = VoltAGE/main.m; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = main.mm; path = VoltAGE/main.mm; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		3AB466B81C993F3900509F41 /* RCTContactPickerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCTContactPickerManager.h; path = VoltAGE/RCTContactPickerManager.h; sourceTree = "<group>"; };
+		3AB466B91C993F3900509F41 /* RCTContactPickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCTContactPickerManager.m; path = VoltAGE/RCTContactPickerManager.m; sourceTree = "<group>"; };
+		3AB466BB1C99445700509F41 /* RCTDeepMindManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RCTDeepMindManager.h; path = VoltAGE/RCTDeepMindManager.h; sourceTree = "<group>"; };
+		3AB466BC1C9944C300509F41 /* RCTDeepMindManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCTDeepMindManager.m; path = VoltAGE/RCTDeepMindManager.m; sourceTree = "<group>"; };
+		3AB466BE1C99555700509F41 /* SquareCamViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SquareCamViewController.h; path = VoltAGE/SquareCamViewController.h; sourceTree = "<group>"; };
+		3AB466BF1C99593800509F41 /* SquareCamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SquareCamViewController.m; path = VoltAGE/SquareCamViewController.m; sourceTree = "<group>"; };
+		3AB466C31C995B2F00509F41 /* DeepBelief.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeepBelief.framework; path = VoltAGE/Frameworks/DeepBelief.framework; sourceTree = "<group>"; };
+		3AB466C51C995B8200509F41 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		3AB466C71C995B8E00509F41 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3AB466C91C995B9500509F41 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3AB466CB1C995BA600509F41 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3AB466CE1C997CE100509F41 /* jetpac.ntwk */ = {isa = PBXFileReference; lastKnownFileType = file; name = jetpac.ntwk; path = VoltAGE/jetpac.ntwk; sourceTree = "<group>"; };
+		3AB466CF1C997CE100509F41 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Prefix.pch; path = VoltAGE/Prefix.pch; sourceTree = "<group>"; };
+		3AB466D21C99DC2200509F41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = VoltAGE/Base.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		3AB466D41C99DC2200509F41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = VoltAGE/Base.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		3AB466D71C9B632200509F41 /* squarePNG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = squarePNG.png; path = VoltAGE/squarePNG.png; sourceTree = "<group>"; };
+		3AB466D91C9DE21900509F41 /* RCTDeepMindViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCTDeepMindViewManager.m; path = VoltAGE/RCTDeepMindViewManager.m; sourceTree = "<group>"; };
+		3AB466DB1C9DE31400509F41 /* RCTDeepMindViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RCTDeepMindViewManager.h; path = VoltAGE/RCTDeepMindViewManager.h; sourceTree = "<group>"; };
+		3AB466E11C9E242A00509F41 /* RCTCamera.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTCamera.xcodeproj; path = "../node_modules/react-native-camera/ios/RCTCamera.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,6 +179,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AB466CC1C995BA600509F41 /* UIKit.framework in Frameworks */,
+				3AB466CA1C995B9500509F41 /* CoreGraphics.framework in Frameworks */,
+				3AB466C81C995B8E00509F41 /* Foundation.framework in Frameworks */,
+				3AB466C61C995B8200509F41 /* Accelerate.framework in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
@@ -148,6 +191,7 @@
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
 				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
+				3AB466C41C995B2F00509F41 /* DeepBelief.framework in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 			);
@@ -232,13 +276,26 @@
 		13B07FAE1A68108700A75B9A /* VoltAGE */ = {
 			isa = PBXGroup;
 			children = (
+				3AB466CE1C997CE100509F41 /* jetpac.ntwk */,
+				3AB466CF1C997CE100509F41 /* Prefix.pch */,
+				3AB466BE1C99555700509F41 /* SquareCamViewController.h */,
+				3AB466BF1C99593800509F41 /* SquareCamViewController.m */,
+				3AB466D71C9B632200509F41 /* squarePNG.png */,
+				3AB466DB1C9DE31400509F41 /* RCTDeepMindViewManager.h */,
+				3AB466D91C9DE21900509F41 /* RCTDeepMindViewManager.m */,
+				3AB466BB1C99445700509F41 /* RCTDeepMindManager.h */,
+				3AB466BC1C9944C300509F41 /* RCTDeepMindManager.m */,
+				3AB466B81C993F3900509F41 /* RCTContactPickerManager.h */,
+				3AB466B91C993F3900509F41 /* RCTContactPickerManager.m */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
-				13B07FB71A68108700A75B9A /* main.m */,
+				13B07FB71A68108700A75B9A /* main.mm */,
+				3AB466D11C99DC2200509F41 /* MainStoryboard_iPad.storyboard */,
+				3AB466D31C99DC2200509F41 /* MainStoryboard_iPhone.storyboard */,
 			);
 			name = VoltAGE;
 			sourceTree = "<group>";
@@ -247,6 +304,26 @@
 			isa = PBXGroup;
 			children = (
 				146834041AC3E56700842450 /* libReact.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3AB466CD1C995BD000509F41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3AB466CB1C995BA600509F41 /* UIKit.framework */,
+				3AB466C91C995B9500509F41 /* CoreGraphics.framework */,
+				3AB466C71C995B8E00509F41 /* Foundation.framework */,
+				3AB466C51C995B8200509F41 /* Accelerate.framework */,
+				3AB466C31C995B2F00509F41 /* DeepBelief.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3AB466E21C9E242A00509F41 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3AB466E61C9E242A00509F41 /* libRCTCamera.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -262,6 +339,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				3AB466E11C9E242A00509F41 /* RCTCamera.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
 				00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */,
@@ -287,6 +365,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				3AB466CD1C995BD000509F41 /* Frameworks */,
 				13B07FAE1A68108700A75B9A /* VoltAGE */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* VoltAGETests */,
@@ -377,6 +456,10 @@
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
 					ProjectRef = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
+				},
+				{
+					ProductGroup = 3AB466E21C9E242A00509F41 /* Products */;
+					ProjectRef = 3AB466E11C9E242A00509F41 /* RCTCamera.xcodeproj */;
 				},
 				{
 					ProductGroup = 00C302B61ABCB90400DB3ED1 /* Products */;
@@ -480,6 +563,13 @@
 			remoteRef = 146834031AC3E56700842450 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		3AB466E61C9E242A00509F41 /* libRCTCamera.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTCamera.a;
+			remoteRef = 3AB466E51C9E242A00509F41 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		78C398B91ACF4ADC00677621 /* libRCTLinking.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -508,7 +598,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AB466D61C99DC2200509F41 /* MainStoryboard_iPhone.storyboard in Resources */,
+				3AB466D51C99DC2200509F41 /* MainStoryboard_iPad.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				3AB466D01C997CE100509F41 /* jetpac.ntwk in Resources */,
+				3AB466D81C9B632200509F41 /* squarePNG.png in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,8 +639,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AB466DA1C9DE21900509F41 /* RCTDeepMindViewManager.m in Sources */,
+				3AB466BA1C993F3900509F41 /* RCTContactPickerManager.m in Sources */,
+				3AB466BD1C9944C300509F41 /* RCTDeepMindManager.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
-				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				3AB466C01C99593800509F41 /* SquareCamViewController.m in Sources */,
+				13B07FC11A68108700A75B9A /* main.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -568,6 +666,22 @@
 			);
 			name = LaunchScreen.xib;
 			path = VoltAGE;
+			sourceTree = "<group>";
+		};
+		3AB466D11C99DC2200509F41 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AB466D21C99DC2200509F41 /* Base */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		3AB466D31C99DC2200509F41 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AB466D41C99DC2200509F41 /* Base */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -617,6 +731,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEAD_CODE_STRIPPING = NO;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VoltAGE/Frameworks",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -637,6 +756,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VoltAGE/Frameworks",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -691,9 +815,13 @@
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_QUOTE_LINKER_ARGUMENTS_FOR_COMPILER_DRIVER = YES;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-lc++";
+				"OTHER_LDFLAGS[sdk=iphoneos*]" = "-lc++";
 				SDKROOT = iphoneos;
+				VALID_ARCHS = "arm64 arms7 armv7s";
 			};
 			name = Debug;
 		};
@@ -731,9 +859,12 @@
 					"$(SRCROOT)/../node_modules/react-native/React/**",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_QUOTE_LINKER_ARGUMENTS_FOR_COMPILER_DRIVER = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-lc++";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 arms7 armv7s";
 			};
 			name = Release;
 		};
