@@ -1,96 +1,85 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
  */
 'use strict';
 import React, {
   AppRegistry,
   Component,
+  Dimensions,
   StyleSheet,
   Text,
   View,
+  TouchableHighlight,
   Alert,
 } from 'react-native';
-
-import Swiper from 'react-native-swiper';
 import Camera from 'react-native-camera';
-const ContactPickerIOS = require('./ContactPickerIOS.js');
-const DeepMindIOS = require('./DeepMindIOS.js');
-
-
-var deepMind = function(callback){
-  DeepMindIOS.openLearner({arg1: "hello"},
-			   (message) => callback(message));
-//  ContactPickerIOS.openPicker({arg1: "hello"},
-//			      (name,number) => callback(name,number));
-}
+import Swiper from 'react-native-swiper';
 
 class VoltAGE extends Component {
-  
-  _changeView(){
-    this.refs.swiper.scrollTo(1);
-  }
-
-  componentDidMount(){
-  }
-
   render() {
     return (
-      <Swiper 
-        style={styles.wraper}
-        showsPagination={false}
+      <Swiper
+        style={styles.wrapper}
+	showsPagination={false}
 	loop={false}
 	autoplay={false}
-	autoplayTimeout={1}
+	autoplayTimeout={0}
 	ref={'swiper'}>
-        <View style={styles.slide1}>
-	  <Camera style={styles.preview} >
-	    <Text style={styles.capture}>[CAPTURE]</Text>
+        <View style={styles.container}>
+          <Camera
+	  ref={(cam) => {
+	    this.camera = cam;
+	  }}
+	  style={styles.preview}
+	  aspect={Camera.constants.Aspect.Fill}
+	  onBarCodeRead={(data)=>{Alert.alert('barcoe!',data.data)}}
+	  >
+	    <Text style={styles.capture} onPress={this.takePicture.bind(this)}>[CAPTURE]</Text>
 	  </Camera>
-	</View>
-	<View style={styles.slide2}>
-	  <Text 
-	    style={styles.text}
-	    onPress={()=>{deepMind((message)=>{console.log(message)})}}>Hello Swiper</Text>
-	</View>
-	<View style={styles.slide3}>
-	  <Text style={styles.text}>And simple</Text>
+        </View>
+	<View style={styles.slider2}>
+	  <Text style={styles.text}>Hello Swiper</Text>
 	</View>
       </Swiper>
     );
+  }
+
+  takePicture() {
+    this.camera.capture()
+      .then((data) => console.log(data))
+      .catch(err => console.error(err));
   }
 }
 
 const styles = StyleSheet.create({
   wrapper: {
   },
-  slide1: {
+  slider1: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#9DD6EB',
   },
-  slide2: {
+  slider2: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#97CAE5',
   },
-  slide3: {
+  slider3: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#92BBD9',
   },
-  test: {
-    color: '#fff',
-    fontSize: 30,
-    fontWeight: 'bold',
+  container: {
+    flex: 1
   },
   preview: {
     flex: 1,
     justifyContent: 'flex-end',
     alignItems: 'center',
+    height: Dimensions.get('window').height,
+    width: Dimensions.get('window').width
   },
   capture: {
     flex: 0,
@@ -98,7 +87,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     color: '#000',
     padding: 10,
-    margin: 20,
+    margin: 40
   },
 });
 
