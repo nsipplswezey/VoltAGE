@@ -41,7 +41,7 @@ export default class TargetOverlay extends Component{
   render(){
     return(
 	    <Animated.Image 
-	      source={require('../Target.png')} 
+	      source={require('../Assets/Target.png')} 
 	      style={
 	        {flex: 0,
 		 width: 500,
