@@ -38,17 +38,15 @@ export default class Detector extends Component{
     return(
           <View style={styles.container}>
             <Camera
-	      ref={(cam) => {
-	      this.camera = cam;
-	        }}
-	      style={styles.preview}
-	      aspect={Camera.constants.Aspect.Fill}
-	      onCNNDetect={(data)=>{this._scrollToIndex(1)}}>
-	    <Image 
-	      source={require('../Target.png')} 
-	      style={styles.captureTarget}
-	      resizeMode={'contain'}/> 
-	    </Camera>
+      	      ref={(cam) => {this.camera = cam;}}
+      	      style={styles.preview}
+      	      aspect={Camera.constants.Aspect.Fill}
+      	      onCNNDetect={(data)=>{this._scrollToIndex(1)}}>
+        	    <Image
+        	      source={require('../Target.png')}
+        	      style={styles.captureTarget}
+        	      resizeMode={'contain'}/>
+      	    </Camera>
           </View>
     )
   }

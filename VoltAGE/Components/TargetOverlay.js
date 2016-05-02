@@ -9,6 +9,7 @@ import React, {
   Dimensions,
   Animated,
   AppStateIOS,
+  NativeAppEventEmitter,
 } from 'react-native';
 
 
@@ -35,32 +36,34 @@ export default class TargetOverlay extends Component{
     super(props);
     this.state = {
       bounceValue: new Animated.Value(0),
+      wiggleValue: new Animated.Value(0),
     };
   }
 
   render(){
     return(
-	    <Animated.Image 
-	      source={require('../Assets/Target.png')} 
+	    <Animated.Image
+	      source={require('../Assets/Target.png')}
 	      style={
 	        {flex: 0,
-		 width: 500,
-		 height: 500,
-		 transform: [
-		   {scale: this.state.bounceValue}
-		 ]}
+		       width: 500,
+		       height: 500,
+		       transform: [
+		         {scale: this.state.bounceValue}
+		       ]}
 	      }
-	      resizeMode={'contain'}/> 
-    )
-  }
+	      resizeMode={'contain'}/>
+    )}
 
   componentDidMount() {
     this._bounce();
     AppStateIOS.addEventListener('change',this._handleIOSstateChange.bind(this));
+    NativeAppEventEmitter.addListener('CameraCNNUpdate', this._handleCNNUpdate.bind(this));
   }
 
   componentWillUnmount(){
-    AppStateIOS.removeEventListener('change',()=>{console.log('unmounted')})
+    AppStateIOS.removeEventListener('change',()=>{console.log('unmounted: AppState')})
+    NativeAppEventEmitter.removeListener('CameraCNNUpdate', ()=>{console.log('unmounted:CNN update')})
   }
 
   _handleIOSstateChange(){
@@ -70,15 +73,22 @@ export default class TargetOverlay extends Component{
     }
   }
 
+  _handleCNNUpdate(data){
+    console.log('overlay',data.amount);
+    this.state.wiggleValue.setValue(data.amount);
+
+  }
+
   _bounce(){
+    console.log('wiggle',this.state.wiggleValue);
     this.state.bounceValue.setValue(1.5);
     Animated.spring(
       this.state.bounceValue,
       {
         toValue: 0.8,
-	friction: 1,
+	      friction: 1,
       }
-    ).start();
+    ).start(() => {this._bounce()});
   }
 
 }
