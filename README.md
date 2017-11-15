@@ -12,14 +12,13 @@ When the physical item is gifted, the reciever points their phone at the item to
 v0.0.2 milestones
 * react-native-camera extended to stream frames to CNN √
 
-* implement DeepBeliefSDK in extended react-native-camera √
+* implement DeepBeliefSDK in extended react-native-camera (currently being rebuilt)
 
-* Deep belief trained on relevant object set √
+* Deep belief trained on relevant object set (currently being rebuilt)
 
-* Zero touch UI reacts to camera targets √
+* Zero touch UI reacts to camera targets (currently being rebuilt)
 
-## Next steps:
-v0.0.3 milestones
+## Future steps:
 * unique gift fingerprinting (TensorFlow)
 
 * machine learning server for consumption of physical images(C++)
@@ -33,7 +32,7 @@ v0.0.1 intent was test of critical technologies: react-native and DeepBelief. Ca
 
 v0.0.2 intent was to create a sufficient UX to consider app-store submission. Can we make something worth submitting? Confirmed
 
-v0.0.3 intent is to explore the scope of a unique tech assets. Can we make something special?
+Next intent is to explore the scope of a unique tech assets. Can we make something special?
 
 Why aren't you building a backend simultenously with the front end from day 1?
 Two reasons:
@@ -52,10 +51,9 @@ Forked react-native-swiper for UI.
 Forked react-native-camera for streaming camera frames to DeepBelief learning API.
 
 Back-end:
-Currently under re-evaluation.
 API using node for authentication, user creation, login, user image storage.
 
 # How it works:
-In flow chart-ese: User #1 creates a physical object. User #1 trains a convoluted neural net(CNN) to identify the object. User #1 can share that classifier parameters with user #2. User #2 uses their phone to positively classify the physical object shared by user #2.
+User #1 creates a physical object. User #1 trains a convoluted neural net(CNN) to identify the object. User #1 can share that classifier parameters with user #2. User #2 uses their phone to positively classify the physical object shared by user #2.
 
 In english: I give you a gift. You download the app, which downloads the parametrized CNN from the server. You point your phone at the object. The CNN recognizes the object, and logs you in with instructions.
