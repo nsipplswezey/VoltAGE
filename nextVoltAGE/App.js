@@ -31,6 +31,8 @@ export default class App extends React.Component {
 
   componentDidMount(){
     AppState.addEventListener('change',this._handleChange.bind(this));
+
+	this.setCNNModel();
   }
 
   componentWillUnmount(){
@@ -43,9 +45,9 @@ export default class App extends React.Component {
     return (
           <View style={styles.container}>
             <Camera
-	            ref={(cam) => {this.camera = cam;}}
-	            style={styles.preview}
-	            aspect={Camera.constants.Aspect.Fill}
+	          ref={(cam) => {this.camera = cam;}}
+	          style={styles.preview}
+	          aspect={Camera.constants.Aspect.Fill}
               onCNNDetect={(event)=>{console.log(event.data)}}
               //onCNNDetect={(data)=>{this._scrollToIndex(1)}}
               //onCNNDetect={(event) => {console.log("positive CNN classification"); console.log(event.data);}}
@@ -195,6 +197,18 @@ export default class App extends React.Component {
     }
   }
 
+  setCNNModel() {
+    fetch('https://evening-falls-93288.herokuapp.com/v1/detectors/1')
+    .then((response) => response.json())
+    .then((responseJson) => {
+      let detectorParamString = responseJson.data[0].parameters;
+      this.camera.setCNNModel(detectorParamString);
+    })
+    .catch((error) => {
+      console.error(error);
+    })
+  }
+
   takePicture() {
     this.camera.capture()
       .then((data) => console.log(data))
@@ -208,7 +222,7 @@ export default class App extends React.Component {
       var login = -this.state.panel;
       this.state = {panel: 0};
       console.log('reset, scrolled to: ' + login);
-      this.horizontalOne.scrollTo(login);
+      //this.horizontalOne.scrollTo(login);
     }
   }
 }
