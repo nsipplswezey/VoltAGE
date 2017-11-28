@@ -18,15 +18,6 @@ v0.0.2 milestones
 
 * Zero touch UI reacts to camera targets (currently being rebuilt)
 
-## Future steps:
-* unique gift fingerprinting (TensorFlow)
-
-* machine learning server for consumption of physical images(C++)
-
-* API can create users(re-evaluate based on finger printing)
-
-* extend API to store physical object images(re-evaluating based on finger printing)
-
 ## Selected Dev Notes + Rationale:
 v0.0.1 intent was test of critical technologies: react-native and DeepBelief. Can we get up and running? Confirmed.
 
@@ -62,3 +53,13 @@ The current implementation of VoltAGE is now tightly coupled with https://github
 User #1 creates a physical object. User #1 trains a convoluted neural net(CNN) to identify the object. User #1 can share that classifier parameters with user #2. User #2 uses their phone to positively classify the physical object shared by user #2.
 
 In english: I give you a gift. You download the app, which downloads the parametrized CNN from the server. You point your phone at the object. The CNN recognizes the object, and logs you in with instructions.
+
+
+## Future steps:
+* unique gift fingerprinting (TensorFlow)
+
+* machine learning server for consumption of physical images(C++)
+
+* API can create users(re-evaluate based on finger printing)
+
+* extend API to store physical object images(re-evaluating based on finger printing)
