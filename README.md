@@ -47,7 +47,10 @@ API using node for authentication, user creation, login, user image storage.
 ## Technical Notes:
 
 11/28/17
+
 The current implementation of VoltAGE is now tightly coupled with https://github.com/nsipplswezey/react-native-camera. There seems to be some stickiness in the scoping of the linked DeepBeliefSDK and at this stage the SDK appears to need to be linked both in the main VoltAGE project, and in the fork of `react-native-camera`. This means the DeepBeliefSDK is added to the VoltAGE project as a dependency, and also appears in the `Frameworks` directory of both VoltAGE and react-native-camera, and the path to that directory is included in the `Framework Search Paths` property of both projects. This might be improved later, as ideally the dependency would only be added to `react-native-camera` and be encapsulated there.
+
+Additionally, the DeepBeliefSDK was built without bitcode, so bitcode is now turned off in https://github.com/nsipplswezey/react-native-camera. This may be improved later by rebuilding a fork of DeepBeliefSDK.
 
 # How it works:
 User #1 creates a physical object. User #1 trains a convoluted neural net(CNN) to identify the object. User #1 can share that classifier parameters with user #2. User #2 uses their phone to positively classify the physical object shared by user #2.
