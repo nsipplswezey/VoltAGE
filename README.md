@@ -10,13 +10,13 @@ When the physical item is gifted, the reciever points their phone at the item to
 
 ## Current status:
 v0.0.2 milestones
-* react-native-camera extended to stream frames to CNN √
+- [x] react-native-camera extended to stream frames to CNN √
 
-* implement DeepBeliefSDK in extended react-native-camera (currently being rebuilt)
+- [x] implement DeepBeliefSDK in extended react-native-camera
 
-* Deep belief trained on relevant object set (currently being rebuilt)
+- [ ] Deep belief trained on relevant object set (single object)
 
-* Zero touch UI reacts to camera targets (currently being rebuilt)
+- [ ] Zero touch UI reacts to camera targets (currently being rebuilt)
 
 ## Selected Dev Notes + Rationale:
 v0.0.1 intent was test of critical technologies: react-native and DeepBelief. Can we get up and running? Confirmed.
