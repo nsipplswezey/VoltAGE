@@ -50,7 +50,7 @@ User #1 creates a physical object. User #1 trains a convoluted neural net(CNN) t
 In english: I give you a gift. You download the app, which downloads the parametrized CNN from the server. You point your phone at the object. The CNN recognizes the object, and logs you in with instructions.
 
 
-## Future steps:
+## Future:
 * unique gift fingerprinting (TensorFlow)
 
 * machine learning server for consumption of physical images(C++)
