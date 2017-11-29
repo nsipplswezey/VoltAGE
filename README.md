@@ -10,7 +10,7 @@ When the physical item is gifted, the reciever points their phone at the item to
 
 ## Current status:
 v0.0.2 milestones
-- [x] react-native-camera extended to stream frames to CNN √
+- [x] react-native-camera extended to stream frames to CNN
 
 - [x] implement DeepBeliefSDK in extended react-native-camera
 
