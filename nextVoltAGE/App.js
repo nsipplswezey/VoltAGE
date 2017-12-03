@@ -230,10 +230,6 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   wrapper: {
   },
-  text: {
-    color: 'white',
-    backgroundColor: 'black',
-  },
   slider1: {
     flex: 1,
     justifyContent: 'center',
@@ -281,8 +277,6 @@ const styles = StyleSheet.create({
     height: 500,
   },
   //testing css
-  wrapper: {
-  },
   slide1: {
     flex: 1,
     justifyContent: 'center',
