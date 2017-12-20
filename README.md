@@ -14,7 +14,7 @@ v0.0.2 milestones
 
 - [x] implement DeepBeliefSDK in extended react-native-camera
 
-- [ ] Deep belief trained on relevant object set (single object)
+- [x] Deep belief trained on relevant object set (two objects)
 
 - [ ] Zero touch UI reacts to camera targets (currently being rebuilt)
 
