@@ -10,7 +10,7 @@ import {
   TouchableHighlight,
   Alert,
   Image,
-  AppState,
+  AppState
 } from 'react-native';
 import React, { Component } from 'react';
 import Camera from 'react-native-camera';
@@ -31,8 +31,7 @@ export default class App extends React.Component {
 
   componentDidMount(){
     AppState.addEventListener('change',this._handleChange.bind(this));
-
-	this.setCNNModel();
+    this.setCNNModel();
   }
 
   componentWillUnmount(){
