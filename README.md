@@ -9,6 +9,15 @@ We pass images of the physical item to a convoluted nerual net, optimized for mo
 When the physical item is gifted, the reciever points their phone at the item to identify the item and document receipt.
 
 ## Current status:
+v0.0.3 milestones
+- [ ] gift interaction between android and iOS device
+
+- [ ] beta channel and app store deployment
+
+- [ ] model training workflow for new objects
+
+- [ ] clean coherent UX
+
 v0.0.2 milestones
 - [x] react-native-camera extended to stream frames to CNN
 
@@ -16,7 +25,7 @@ v0.0.2 milestones
 
 - [x] Deep belief trained on relevant object set (two objects)
 
-- [ ] Zero touch UI reacts to camera targets (currently being rebuilt)
+- [x] Zero touch UI reacts to camera targets
 
 ## Selected Dev Notes + Rationale:
 v0.0.1 intent was test of critical technologies: react-native and DeepBelief. Can we get up and running? Confirmed.
