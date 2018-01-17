@@ -1268,6 +1268,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.nsipplswezey.nextVoltAGE;
 				PRODUCT_NAME = nextVoltAGE;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1295,6 +1296,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.nsipplswezey.nextVoltAGE;
 				PRODUCT_NAME = nextVoltAGE;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

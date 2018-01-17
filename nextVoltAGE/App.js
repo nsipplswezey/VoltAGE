@@ -14,7 +14,6 @@ import {
 } from 'react-native';
 import React, { Component } from 'react';
 import Camera from 'react-native-camera';
-import Swiper from 'react-native-swiper';
 
 
 import TargetOverlay from './Components/TargetOverlay.js';
@@ -47,23 +46,18 @@ export default class App extends React.Component {
 	          ref={(cam) => {this.camera = cam;}}
 	          style={styles.preview}
 	          aspect={Camera.constants.Aspect.Fill}
-              onCNNDetect={(event)=>{
-                console.log(event.data);
-                if(event.data > 0.9){this._scrollToIndex(1);}
-              }}
               >
-              <Swiper
-                style={styles.wrapper}
-                showsButtons={true}
-                showsPagination={false}
-                loop={false}
-                autoplayTimeout={0}
-                ref={(horizontalOne) => {this.horizontalOne = horizontalOne}}
-                >
+              {/*
+                onCNNDetect={(event)=>{
+                  console.log(event.data);
+                  //if(event.data > 0.9){this._scrollToIndex(1);}
+                }}
+              */}
                 <View style={styles.preview}>
                   <TargetOverlay />
                 </View>
 
+                {/*
                 <View style={styles.preview}>
                   <Image
                     source={require('./Assets/SunTarget.png')}
@@ -106,8 +100,7 @@ export default class App extends React.Component {
                   <Text style={styles.text}>I only breath at night.</Text>
                   <Text style={styles.text}>Caring for me is as easy as 5,4,3,2,1</Text>
                 </View>
-              </Swiper>
-
+              */}
       	    </Camera>
           </View>
     );
@@ -144,9 +137,9 @@ export default class App extends React.Component {
     //reset view to login if we go background or inactive
     if(AppState.currentState === 'background' || AppState.currentState === 'inactive'){
       //move the view to login
-      var login = -this.state.panel;
-      this.state = {panel: 0};
-      console.log('reset, scrolled to: ' + login);
+      // var login = -this.state.panel;
+      // this.state = {panel: 0};
+      // console.log('reset, scrolled to: ' + login);
       //this.horizontalOne.scrollTo(login);
     }
   }
