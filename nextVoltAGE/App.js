@@ -123,6 +123,9 @@ export default class App extends React.Component {
       this.camera.setCNNModel(detectorParamString);
     })
     .catch((error) => {
+      //Set CNN model with no argument
+      console.log("Model fetch failed, setting CNN model with null");
+      this.camera.setCNNModel('null');
       console.error(error);
     })
   }
